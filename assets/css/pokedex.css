@@ -1,0 +1,363 @@
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.normal {
+    background-color: #a6a877;
+}
+
+.normal-light {
+    background-color: #a6a877;
+    filter: brightness(90%);
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.grass-light {
+    background-color: #77c850;
+    filter: brightness(90%);
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.fire-light {
+    background-color: #ee7f30;
+    filter: brightness(90%);
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.water-light {
+    background-color: #678fee;
+    filter: brightness(90%);
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.electric-light {
+    background-color: #f7cf2e;
+    filter: brightness(90%);
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ice-light {
+    background-color: #98d5d7;
+    filter: brightness(90%);
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.ground-light {
+    background-color: #dfbf69;
+    filter: brightness(90%);
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.flying-light {
+    background-color: #a98ff0;
+    filter: brightness(90%);
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.poison-light {
+    background-color: #a040a0;
+    filter: brightness(90%);
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.fighting-light {
+    background-color: #bf3029;
+    filter: brightness(90%);
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.psychic-light {
+    background-color: #f65687;
+    filter: brightness(90%);
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.dark-light {
+    background-color: #725847;
+    filter: brightness(90%);
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.rock-light {
+    background-color: #b8a137;
+    filter: brightness(90%);
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.bug-light {
+    background-color: #a8b720;
+    filter: brightness(90%);
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.ghost-light {
+    background-color: #6e5896;
+    filter: brightness(90%);
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.steel-light {
+    background-color: #b9b7cf;
+    filter: brightness(90%);
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.dragon-light {
+    background-color: #6f38f6;
+    filter: brightness(90%);
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+.fairy-light {
+    background-color: #f9aec7;
+    filter: brightness(90%);
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.pokemon:hover {
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.content {
+    position: relative;
+}
+
+.pokemon .number {
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: .625rem;
+}
+
+.pokemon .name {
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: .25rem;
+}
+
+.pokemon .detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type {
+    color: #fff;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+
+.pokemon .detail img {
+    max-width: 100%;
+    height: 70px;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.modalDetail {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    filter: brightness(1.05);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    transition: 1s;
+}
+
+.modalDetail .modalDetailInfo {
+    background-color: white;
+    width: 40%;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modalDetail .modalDetailInfo span {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modalDetail .modalDetailInfo .modalHeader {
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+}
+
+.modalDetail .modalDetailInfo .modalHeader .modalTitle {
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modalDetail .modalDetailInfo .modalHeader .modalTitle h1 {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.modalDetail .modalDetailInfo .modalHeader .modalTitle ul {
+    padding: 0;
+    margin-left: 30px;
+}
+
+.modalDetail .modalDetailInfo .modalHeader .modalTitle ul li {
+    text-align: none;
+    list-style-type: none;
+    display: inline;
+    color: white;
+    text-transform: uppercase;
+    padding: 3px 14px;
+    font-size: 12px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.modalDetail .modalDetailInfo .modalContent {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+}
+
+.modalDetail .modalDetailInfo .modalContent .description {
+    display: flex;
+    color: #8d8d8d;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.modalDetail .modalDetailInfo .modalContent .description b {
+    color: #4b4b4b;
+    margin-right: 3px;
+}
+
+.modalDetail .modalDetailInfo .modalHeader .pokemonImg img {
+    position: relative;
+    width: 120px;
+    border-radius: 100%;
+}
